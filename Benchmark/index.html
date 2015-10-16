@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Sorting Algorithms</title>
+
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="sorting.js"></script>
+
+  </head>
+  <body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+    <h2>Sorting Algorithm Benchmarks</h2>
+        <div id="errorArea"></div>
+        <p>Choose your algorithm, enter the number of elements to test on and
+           click the run button.  When you do, an array will be generated
+           and filled with random numbers and sorted using the specified sorting
+           algorithm.</p>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">Algorithm:</div>
+                <div class="col-md-2">
+                    <select id="algo" class="form-control">
+                      <option value="bubbleSort">Bubble Sort</option>
+                      <option value="insertionSort">Insertion Sort</option>
+                      <option value="selectionSort">Selection Sort</option>
+                      <option value="quicksort">Quick Sort</option>
+                      <option value="default">JavaScript's <code>sort()</code></option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Size</div>
+                <div class="col-md-2"><input type="text" id="size" value="100"/></div>
+            </div>
+            <button type="button" class="btn btn-lrg btn-primary" onclick="runTest()">Run</button>
+        </div>
+    </div><!-- end of jumbotron -->
+
+      <div class="container col-md-8">
+          <div id="results"></div>
+      </div>
+  </div>
+
+  </body>
+</html>
